@@ -1,7 +1,7 @@
 function NavBar() {
   return (
     <>
-      <div className="row align-items-center mb-3">
+      <div className="row align-items-center"> 
         <div className="col">
           <h1>Household Finance</h1>
           <p>All-in-one: spending, budgets, savings, goals, investments</p>
