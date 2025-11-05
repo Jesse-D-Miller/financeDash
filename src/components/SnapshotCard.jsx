@@ -24,16 +24,16 @@ function SnapshotCard() {
   ];
 
   return (
-    <div class="d-flex justify-content-center row mb-3">
+    <div className="d-flex justify-content-center row mb-3">
       {insights.map((item) => (
-        <div class="card w-75 m-3 bg-success-subtle">
-          <div class="card-header">{item.title}</div>
-          <div class="card-body">
+        <div className="card w-75 m-3 bg-success-subtle">
+          <div className="card-header">{item.title}</div>
+          <div className="card-body">
             <figure>
-              <blockquote class="blockquote">
+              <blockquote className="blockquote">
                 <p>{item.amount}</p>
               </blockquote>
-              <figcaption class="blockquote-footer">{item.source}</figcaption>
+              <figcaption className="blockquote-footer">{item.source}</figcaption>
             </figure>
           </div>
         </div>
