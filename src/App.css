@@ -1,0 +1,43 @@
+/* 
+- Backgrounds: #F8FAFC (light) and #020617 (dark)
+- Borders: #e2e8f0 (light) and #1e293b (dark)
+- Primary accent: Indigo (#6366f1) used for charts, progress bars, and active tabs.
+- Success and warning: Emerald (#22c55e) and Rose (#ef4444) for positive/negative balances.
+- Chart palette (COLORS array): ['#0ea5e9', '#22c55e', '#f59e0b', '#6366f1', '#ef4444', '#14b8a6', '#a78bfa'] 
+*/
+
+:root {
+  --text-color: #f1f5f9;
+  --background-color: #020517;
+  --primary-color: #091125;
+  --secondary-color: #1c293f;
+  --accent-color: #523cf6;
+}
+
+.light-mode {
+  --text-color: #060a0e;
+  --background-color: #e8ebfd;
+  --primary-color: #dae2f6;
+  --secondary-color: #c0cce3;
+  --accent-color: #c0cce3;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  background: var(--primary-color);
+  border: var(--secondary-color);
+  color: var(--text-color)
+}
+
+.navbar-upper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navbar-upper-end {
+  justify-self: end;
+  align-content: center;
+}
