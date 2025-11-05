@@ -8,16 +8,16 @@ function NavBar() {
         </div>
 
         <div className="navbar-upper-end">
-          <button type="button">
+          <button className="button-add-transaction" type="button">
             + Add Transaction
           </button>
-          <button type="button">
+          <button className="button-light-mode" type="button">
             🌗
           </button>
         </div>
       </div>
 
-      <div className="container-fluid justify-content-start">
+      <div className="navbar-button-list">
         {[
           "Overview",
           "Spending",
@@ -31,7 +31,7 @@ function NavBar() {
         ].map((label) => (
           <button
             key={label}
-            className="btn btn-outline-success me-2"
+            className="navbar-button"
             type="button"
           >
             {label}

@@ -8,9 +8,10 @@
 
 :root {
   --text-color: #f1f5f9;
-  --background-color: #020517;
-  --primary-color: #091125;
-  --secondary-color: #1c293f;
+  --background-color: #020617;
+  --primary-color: #091023;
+  --secondary-color: #0f172c;
+  --tertiary-color: #1c293e;
   --accent-color: #523cf6;
 }
 
@@ -25,11 +26,12 @@
 .navbar {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  padding: 0.5em 2em 0.5em 2em;
 
   background: var(--primary-color);
-  border: var(--secondary-color);
-  color: var(--text-color)
+  border: var(--tertiary-color);
+  color: var(--text-color);
 }
 
 .navbar-upper {
@@ -40,4 +42,38 @@
 .navbar-upper-end {
   justify-self: end;
   align-content: center;
+  font-size: 1.3em;
+}
+
+.button-add-transaction {
+  height: 2em;
+  background: var(--text-color);
+  color: var(--primary-color);
+  border-radius: 17px;
+}
+
+.button-light-mode {
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+  background: var(--secondary-color);
+  border-style: solid;
+  border-color: var(--tertiary-color);
+}
+
+.navbar-button-list {
+  font-size: 17px;
+}
+
+.navbar-button {
+  color: var(--text-color);
+  background: var(--secondary-color);
+  border-color: var(--tertiary-color);
+  border-style: solid;
+
+  border-width: 1px;
+  border-radius: 17px;
+  height: 3em;
+  padding: 0.75em;
+  margin-right: 0.5em;
 }
