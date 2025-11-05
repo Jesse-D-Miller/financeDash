@@ -9,10 +9,10 @@ function NavBar() {
         <div className="col text-end">
           <div className="d-grid gap-2 d-md-flex justify-content-md-end">
             <button className="btn btn-primary me-md-2" type="button">
-              Login
+              + Add Transaction
             </button>
             <button className="btn btn-outline-primary" type="button">
-              Sign Up
+              🌗
             </button>
           </div>
         </div>
