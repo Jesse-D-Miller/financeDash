@@ -3,7 +3,7 @@ import AccountsSnapshot from "./AccountsSnapshot";
 
 function Overview() {
   return (
-    <div>
+    <div className="overview-grid">
       <SnapshotCard />
       <AccountsSnapshot />
     </div>

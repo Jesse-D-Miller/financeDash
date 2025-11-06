@@ -20,21 +20,16 @@ function SnapshotCard() {
       amount: "-CA$ 341,950.00",
       source: "Assets - Liabilities",
     },
-    
   ];
 
   return (
-    <div className="d-flex justify-content-center row mb-3">
+    <div className="grid-card-container">
       {insights.map((item) => (
-        <div className="card w-75 m-3 bg-success-subtle">
-          <div className="card-header">{item.title}</div>
-          <div className="card-body">
-            <figure>
-              <blockquote className="blockquote">
-                <p>{item.amount}</p>
-              </blockquote>
-              <figcaption className="blockquote-footer">{item.source}</figcaption>
-            </figure>
+        <div className="card-account-snapshot">
+          <div>{item.title}</div>
+          <div>
+            <p>{item.amount}</p>
+            <p>{item.source}</p>
           </div>
         </div>
       ))}

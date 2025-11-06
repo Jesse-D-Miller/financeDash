@@ -10,7 +10,6 @@ function AccountsSnapshot() {
 ];
 
   return (
-    <div className="d-flex justify-content-center">
       <div className="card w-50 bg-success-subtle">
         <div className="card-header">Accounts Snapshot</div>
         <div className="col">
@@ -23,7 +22,6 @@ function AccountsSnapshot() {
             ))}
         </div>
       </div>
-    </div>
   );
 }
 

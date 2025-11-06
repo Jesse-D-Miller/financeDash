@@ -3,7 +3,7 @@ import Overview from "./components/Overview";
 
 function App() {
   return (
-    <div>
+    <div className="main-div">
       <NavBar />
       <Overview />
     </div>

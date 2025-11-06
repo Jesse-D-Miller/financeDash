@@ -23,6 +23,11 @@
   --accent-color: #c0cce3;
 }
 
+.main-div {
+  background: var(--background-color);
+  height: 100vh
+}
+
 .navbar {
   display: grid;
   grid-template-columns: 1fr;
@@ -50,6 +55,7 @@
   background: var(--text-color);
   color: var(--primary-color);
   border-radius: 17px;
+  border-style: solid;
 }
 
 .button-light-mode {
@@ -76,4 +82,22 @@
   height: 3em;
   padding: 0.75em;
   margin-right: 0.5em;
+}
+
+.grid-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.5em 2em;
+}
+
+.card-account-snapshot {
+  margin: .5em ;
+  padding: .25em;
+
+  background: var(--primary-color);
+  border-style: solid;
+  border-color: var(--tertiary-color);
+  border-width: 1px;
+  border-radius: 17px;
+  color: var(--text-color);
 }
