@@ -24,6 +24,7 @@
 }
 
 .main-div {
+  justify-items: center;
   background: var(--background-color);
   height: 100vh;
 }
@@ -33,6 +34,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr;
   padding: 0.5em 2em 0.5em 2em;
+  width: 100vw;
 
   background: var(--primary-color);
   border: var(--tertiary-color);
@@ -43,6 +45,8 @@
 .navbar-upper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 75vw;
+  justify-self: center;
 }
 
 .navbar-upper-end {
@@ -70,6 +74,9 @@
 
 .navbar-button-list {
   font-size: 17px;
+  width: 75vw;
+  justify-self: center;
+  justify-items: start;
 }
 
 .navbar-button {
@@ -86,6 +93,7 @@
 }
 
 .overview-grid {
+  width: 75vw ;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*8*/
   grid-template-rows: 150px 150px 150px; /*3*/
