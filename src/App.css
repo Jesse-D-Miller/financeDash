@@ -25,7 +25,7 @@
 
 .main-div {
   background: var(--background-color);
-  height: 100vh
+  height: 100vh;
 }
 
 .navbar {
@@ -37,6 +37,7 @@
   background: var(--primary-color);
   border: var(--tertiary-color);
   color: var(--text-color);
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .navbar-upper {
@@ -84,20 +85,68 @@
   margin-right: 0.5em;
 }
 
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*8*/
+  grid-template-rows: 150px 150px 150px; /*3*/
+  gap: 1em;
+  grid-template-areas:
+    "box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1"
+    "box-6 box-6 box-6 box-6 box-5 box-5 box-5 box-5"
+    "box-6 box-6 box-6 box-6 box-5 box-5 box-5 box-5";
+}
+
 .grid-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 0.5em 2em;
 }
 
 .card-account-snapshot {
-  margin: .5em ;
-  padding: .25em;
+  margin: 1em 0.5em 0em 0.5em ;
+  padding: 0.25em;
 
-  background: var(--primary-color);
+  background: var(--secondary-color);
   border-style: solid;
   border-color: var(--tertiary-color);
   border-width: 1px;
   border-radius: 17px;
   color: var(--text-color);
+}
+
+.graph {
+  border-radius: 17px;
+  background-color: var(--secondary-color);
+  border-color: var(--tertiary-color);
+  border-style: solid;
+  border-width: 1px;
+  color: var(--text-color);
+  margin-left: 0.5em;
+  padding: 0.25em;
+}
+
+.accounts-snapshot-grid-item {
+  border-radius: 17px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--tertiary-color);
+  color: var(--text-color);
+  margin-right: 0.5em;
+  padding: 0.25em;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 2fr;
+  margin: auto;
+  padding: .25em 0;
+}
+
+.list-item {
+  list-style-type: none;
+}
+.list-item.institution{
+  color: #f1f5f964 ; /*this is text colour with transparency added*/
+}
+
+.list-item.balance {
+  justify-self: end;
 }
