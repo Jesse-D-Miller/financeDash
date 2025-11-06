@@ -61,6 +61,13 @@
   color: var(--primary-color);
   border-radius: 17px;
   border-style: solid;
+  margin-right: 0.5em;
+}
+
+.button-add-transaction:hover {
+  transition: background-color 1s, transform 100ms;
+  background-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 .button-light-mode {
@@ -70,6 +77,12 @@
   background: var(--secondary-color);
   border-style: solid;
   border-color: var(--tertiary-color);
+  border-width: 1px;
+}
+.button-light-mode:hover {
+  transition: background-color 1s, transform 100ms;
+  background-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 .navbar-button-list {
@@ -92,8 +105,14 @@
   margin-right: 0.5em;
 }
 
+.navbar-button:hover {
+  transition: background-color 1s, transform 100ms;
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
 .overview-grid {
-  width: 75vw ;
+  width: 75vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*8*/
   grid-template-rows: 150px 150px 150px; /*3*/
@@ -110,7 +129,7 @@
 }
 
 .card-account-snapshot {
-  margin: 1em 0.5em 0em 0.5em ;
+  margin: 1em 0.5em 0em 0.5em;
   padding: 0.25em;
 
   background: var(--secondary-color);
@@ -145,14 +164,14 @@
   display: grid;
   grid-template-columns: 1fr 1.3fr 2fr;
   margin: auto;
-  padding: .25em 0;
+  padding: 0.25em 0;
 }
 
 .list-item {
   list-style-type: none;
 }
-.list-item.institution{
-  color: #f1f5f964 ; /*this is text colour with transparency added*/
+.list-item.institution {
+  color: #f1f5f964; /*this is text colour with transparency added*/
 }
 
 .list-item.balance {
