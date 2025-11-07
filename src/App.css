@@ -7,20 +7,21 @@
 */
 
 :root {
+  --text-color: #060a0e;
+  --background-color: #e8ebfd;
+  --primary-color: #dae2f6;
+  --secondary-color: #c0cce3;
+  --tertiary-color: #1c293e;
+  --accent-color: #523cf6;
+}
+
+[data-theme='dark'] {
   --text-color: #f1f5f9;
   --background-color: #020617;
   --primary-color: #091023;
   --secondary-color: #0f172c;
   --tertiary-color: #1c293e;
   --accent-color: #523cf6;
-}
-
-.light-mode {
-  --text-color: #060a0e;
-  --background-color: #e8ebfd;
-  --primary-color: #dae2f6;
-  --secondary-color: #c0cce3;
-  --accent-color: #c0cce3;
 }
 
 .main-div {
@@ -70,19 +71,32 @@
   transform: scale(1.05);
 }
 
-.button-light-mode {
+#theme-switch {
   height: 2em;
   width: 2em;
-  border-radius: 1em;
+  border-radius: 50%;
   background: var(--secondary-color);
   border-style: solid;
   border-color: var(--tertiary-color);
   border-width: 1px;
 }
-.button-light-mode:hover {
+
+#theme-switch:hover {
   transition: background-color 1s, transform 100ms;
   background-color: var(--accent-color);
   transform: scale(1.05);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+[data-theme='dark'] #theme-switch svg:first-child {
+  display: none;
+}
+
+[data-theme='dark'] #theme-switch svg:last-child {
+  display: block;
 }
 
 .navbar-button-list {
@@ -130,7 +144,7 @@
 
 .card-account-snapshot {
   margin: 1em 0.5em 0em 0.5em;
-  padding: 0.25em;
+  padding: 0.75em;
 
   background: var(--secondary-color);
   border-style: solid;
@@ -138,6 +152,7 @@
   border-width: 1px;
   border-radius: 17px;
   color: var(--text-color);
+  
 }
 
 .graph {
@@ -148,7 +163,7 @@
   border-width: 1px;
   color: var(--text-color);
   margin-left: 0.5em;
-  padding: 0.25em;
+  padding: 0.75em;
 }
 
 .accounts-snapshot-grid-item {
@@ -157,7 +172,7 @@
   border: 1px solid var(--tertiary-color);
   color: var(--text-color);
   margin-right: 0.5em;
-  padding: 0.25em;
+  padding: 0.75em;
 }
 
 .list {
