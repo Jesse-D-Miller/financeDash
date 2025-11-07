@@ -2,6 +2,7 @@ import NavBar from "./components/Navbar";
 import Overview from "./components/Overview";
 import React from "react";
 import useLocalStorage from "use-local-storage";
+import Transactions from "./components/Transactions";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "dark" : "light");
@@ -17,6 +18,7 @@ function App() {
       <h6>OVERVIEW</h6>
       <Overview />
       <h6>TRANSACTIONS</h6>
+      <Transactions />
     </div>
   );
 }
