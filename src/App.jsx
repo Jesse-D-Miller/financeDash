@@ -14,7 +14,9 @@ function App() {
   return (
     <div className="main-div" data-theme={theme}>
       <NavBar switchTheme={switchTheme} />
+      <h6>OVERVIEW</h6>
       <Overview />
+      <h6>TRANSACTIONS</h6>
     </div>
   );
 }
