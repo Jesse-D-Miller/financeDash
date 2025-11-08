@@ -1,11 +1,12 @@
 import SnapshotCard from "./SnapshotCard";
 import AccountsSnapshot from "./AccountsSnapshot";
 import NetWorthGraph from "./NetWorthGraph";
+import OverviewCardCashTotal from "./OverviewCardCashTotal";
 
 function Overview() {
   return (
     <div className="overview-grid">
-      <SnapshotCard />
+      <OverviewCardCashTotal />
       <NetWorthGraph />
       <AccountsSnapshot />
     </div>

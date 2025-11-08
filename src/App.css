@@ -151,14 +151,9 @@
   grid-template-rows: 150px 150px 150px; /*3*/
   gap: 1em;
   grid-template-areas:
-    "box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1"
+    "box-1 box-1 box-2 box-2 box-3 box-3 box-4 box-4"
     "box-6 box-6 box-6 box-6 box-5 box-5 box-5 box-5"
     "box-6 box-6 box-6 box-6 box-5 box-5 box-5 box-5";
-}
-
-.grid-card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card-account-snapshot {
