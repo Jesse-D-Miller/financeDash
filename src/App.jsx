@@ -1,6 +1,5 @@
 import NavBar from "./components/Navbar";
 import Overview from "./components/Overview";
-import React from "react";
 import useLocalStorage from "use-local-storage";
 import Transactions from "./components/Transactions";
 import CSVFileConverter from "./components/CSVFileConverter";

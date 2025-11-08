@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ignore personal data
+data_private/
+*.json
+!src/data/*.json  # keeps mock/test data in src/data tracked
