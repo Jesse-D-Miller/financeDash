@@ -3,6 +3,7 @@ import Overview from "./components/Overview";
 import React from "react";
 import useLocalStorage from "use-local-storage";
 import Transactions from "./components/Transactions";
+import CSVFileConverter from "./components/CSVFileConverter";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "dark" : "light");
@@ -19,6 +20,8 @@ function App() {
       <Overview />
       <h6>TRANSACTIONS</h6>
       <Transactions />
+      <h6>FILE CONVERTER: CSV TO JSON</h6>
+      <CSVFileConverter />
     </div>
   );
 }
