@@ -1,31 +1,48 @@
 import BMOTransactions from "../data/credit/bmo_mock_transactions.json";
 import TangerineTransactions from "../data/credit/tangerine_mock_transactions.json";
-import TDTransactions from "../data/credit/td_mock_transactions.json"
+import TDTransactions from "../data/credit/td_mock_transactions.json";
 
 function OverviewTopCategoriesCard() {
-//filter all ccs for if Month -> category as object key -> amount and add to object.value
+  //filter all ccs for if Month -> category as object key -> amount and add to object.value
 
-//combine all transactionsinto one array
-const allTransactions = [
-  ...BMOTransactions,
-  ...TangerineTransactions,
-  ...TDTransactions,
-]
+  //combine all transactionsinto one array
+  const allTransactions = [
+    ...BMOTransactions,
+    ...TangerineTransactions,
+    ...TDTransactions,
+  ];
 
-//find transaction with most recent posted date
-const mostRecentTransaction = allTransactions.reduce((latest, tx) => {
-  if (!latest) return tx; //first item by default
+  //find transaction with most recent posted date
+  const mostRecentTransaction = allTransactions.reduce((latest, tx) => {
+    if (!latest) return tx; //first item by default
 
-  const latestDate = new Date(latest.date);
-  const currentDate = new Date(tx.date);
+    const latestDate = new Date(latest.date);
+    const currentDate = new Date(tx.date);
 
-  return currentDate > latestDate ? tx : latest;
-}, null);
+    return currentDate > latestDate ? tx : latest;
+  }, null);
 
-console.log(mostRecentTransaction.date);
+  console.log(mostRecentTransaction.date);
 
-//extract mostRecentTransaction year and month from yyyy-mm-dd
+  //extract mostRecentTransaction year and month from yyyy-mm-dd
+  const mostRecentDate = new Date(mostRecentTransaction.date);
+  const targetYear = mostRecentDate.getFullYear(); //2025
+  const targetMonth = mostRecentDate.getMonth(); //0-11, so 10 is november
 
+  //we only want to keep transactions where targetYear and targetMonth match so we will filter using these constants
+  //latest months transactions should reset whenever a more recent month is posted
+  const latestMonthsTransactions = allTransactions.filter((tx) => {
+    const filteredDate = new Date(tx.date);
+    return (
+      filteredDate.getFullYear() === targetYear &&
+      filteredDate.getMonth() === targetMonth
+    );
+  });
+
+  //test where we should see only most recent months transactions
+  console.log(
+  latestMonthsTransactions.map((tx) => tx.date)
+);
 
   return (
     <div className="card-account-snapshot" style={{ gridArea: "box-3" }}>
