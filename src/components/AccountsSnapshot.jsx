@@ -6,7 +6,7 @@ function AccountsSnapshot() {
   return (
     <div className="accounts-snapshot-grid-item" style={{ gridArea: "box-5" }}>
       <h2>Accounts Snapshot</h2>
-      <table className="accounts-snapshot-table">
+      <table>
         <caption>Accounts</caption>
         <tr>
           {tableHeaders.map((header) => (
@@ -15,9 +15,9 @@ function AccountsSnapshot() {
         </tr>
         {data.accounts.map((account) => (
           <tr className="tr-data-container">
-            <td data-cell="date">{account.bank}</td>
-            <td data-cell="account">{account.account_type}</td>
-            <td data-cell="merchant">{account.balance}</td>
+            <td data-cell="institution">{account.bank}</td>
+            <td data-cell="account-type">{account.account_type}</td>
+            <td data-cell="balance">{account.balance}</td>
           </tr>
         ))}
       </table>

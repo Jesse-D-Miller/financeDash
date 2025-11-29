@@ -1,10 +1,4 @@
-/* 
-- Backgrounds: #F8FAFC (light) and #020617 (dark)
-- Borders: #e2e8f0 (light) and #1e293b (dark)
-- Primary accent: Indigo (#6366f1) used for charts, progress bars, and active tabs.
-- Success and warning: Emerald (#22c55e) and Rose (#ef4444) for positive/negative balances.
-- Chart palette (COLORS array): ['#0ea5e9', '#22c55e', '#f59e0b', '#6366f1', '#ef4444', '#14b8a6', '#a78bfa'] 
-*/
+/* colour presets */
 
 :root {
   --text-color: #0b1120;
@@ -24,11 +18,15 @@
   --accent-color: #523cf6;
 }
 
+/*  */
+
 .main-div {
   justify-items: center;
   background: var(--background-color);
   min-height: 100vh;
 }
+
+/* navbar section */
 
 .navbar {
   display: grid;
@@ -144,6 +142,8 @@
   transform: scale(1.05);
 }
 
+/* main body section (no nav) */
+
 .overview-grid {
   width: 75vw;
   display: grid;
@@ -184,9 +184,13 @@
   background-color: var(--secondary-color);
   border: 1px solid var(--tertiary-color);
   color: var(--text-color);
-  margin-right: 0.5em;
-  padding: 0.75em;
   overflow-y: scroll;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto; /*3*/
+  gap: 1em;
+  padding: 1em;
 }
 
 .main-div h6 {
@@ -221,14 +225,12 @@
   background-color: var(--tertiary-color);
   overflow-y: auto;
 }
-/* accounts snapshot container table */
-
-
 
 /* transactions container */
 
 .recent-transaction-container {
   width: 75vw;
+  height: 450px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto; /*3*/
