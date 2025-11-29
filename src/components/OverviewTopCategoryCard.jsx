@@ -3,8 +3,6 @@ import TangerineTransactions from "../data/credit/tangerine_mock_transactions.js
 import TDTransactions from "../data/credit/td_mock_transactions.json";
 
 function OverviewTopCategoriesCard() {
-  //filter all ccs for if Month -> category as object key -> amount and add to object.value
-
   //combine all transactionsinto one array
   const allTransactions = [
     ...BMOTransactions,

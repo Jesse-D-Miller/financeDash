@@ -186,24 +186,7 @@
   color: var(--text-color);
   margin-right: 0.5em;
   padding: 0.75em;
-}
-
-.list {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr 2fr;
-  margin: auto;
-  padding: 0.25em 0;
-}
-
-.list-item {
-  list-style-type: none;
-}
-.list-item.institution {
-  color: #f1f5f964; /*this is text colour with transparency added*/
-}
-
-.list-item.balance {
-  justify-self: end;
+  overflow-y: scroll;
 }
 
 .main-div h6 {
@@ -237,4 +220,39 @@
 
   background-color: var(--tertiary-color);
   overflow-y: auto;
+}
+/* accounts snapshot container table */
+
+
+
+/* transactions container */
+
+.recent-transaction-container {
+  width: 75vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto; /*3*/
+  gap: 1em;
+  /* justify-items: center; */
+  padding: 1em;
+
+  background-color: var(--secondary-color);
+  border-radius: 17px;
+  border: solid var(--tertiary-color) 1px;
+  color: var(--text-color);
+  overflow-y: scroll;
+}
+
+caption,
+td,
+th {
+  padding: 0.5em 1em;
+}
+caption,
+th {
+  text-align: left;
+}
+
+.tr-data-container {
+  border-top: 1px solid var(--tertiary-color);
 }
