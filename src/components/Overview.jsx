@@ -4,6 +4,7 @@ import NetWorthGraph from "./NetWorthGraph";
 import OverviewCardCashTotal from "./OverviewCardCashTotal";
 import NetWorthCard from "./NetWorthCard";
 import OverviewTopCategoriesCard from "./OverviewTopCategoryCard";
+import SpendingPieChart from "./SpendingPieChart";
 
 function Overview() {
   return (
@@ -11,7 +12,7 @@ function Overview() {
       <OverviewCardCashTotal />
       <NetWorthCard />
       <OverviewTopCategoriesCard />
-      <NetWorthGraph />
+      <SpendingPieChart />
       <AccountsSnapshot />
     </div>
   );

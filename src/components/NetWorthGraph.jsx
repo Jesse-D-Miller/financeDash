@@ -7,3 +7,6 @@ function NetWorthGraph() {
 }
 
 export default NetWorthGraph;
+
+
+// no longer using this component

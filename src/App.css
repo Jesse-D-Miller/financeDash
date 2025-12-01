@@ -168,7 +168,8 @@
   color: var(--text-color);
 }
 
-.graph {
+/* pie chart */
+.pie-chart-container {
   border-radius: 17px;
   background-color: var(--secondary-color);
   border-color: var(--tertiary-color);

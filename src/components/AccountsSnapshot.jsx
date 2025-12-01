@@ -26,17 +26,3 @@ function AccountsSnapshot() {
 }
 
 export default AccountsSnapshot;
-
-{
-  /* <ul className="list">
-          <li className="list-item institution">
-            {account.bank}
-          </li>
-          <li className="list-item name">
-            {account.account_type}
-          </li>
-          <li className="list-item balance">
-            CA$ {account.balance}
-          </li>
-        </ul> */
-}
