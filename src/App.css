@@ -168,18 +168,6 @@
   color: var(--text-color);
 }
 
-/* pie chart */
-.pie-chart-container {
-  border-radius: 17px;
-  background-color: var(--secondary-color);
-  border-color: var(--tertiary-color);
-  border-style: solid;
-  border-width: 1px;
-  color: var(--text-color);
-  margin-left: 0.5em;
-  padding: 0.75em;
-}
-
 .accounts-snapshot-grid-item {
   border-radius: 17px;
   background-color: var(--secondary-color);
@@ -259,3 +247,33 @@ th {
 .tr-data-container {
   border-top: 1px solid var(--tertiary-color);
 }
+
+/* pie chart formatting */
+.pie-chart-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 17px;
+  background-color: var(--secondary-color);
+  border-color: var(--tertiary-color);
+  border-style: solid;
+  border-width: 1px;
+  color: var(--text-color);
+  margin-left: 0.5em;
+  padding: 0.75em;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* chart grows, legend fixed */
+  height: 100%;
+  gap: 1em;
+}
+
+.chart-area {
+  min-height: 0;     /* lets responsive container shrink properly */
+}
+
+
+
