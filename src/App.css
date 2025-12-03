@@ -285,5 +285,16 @@ th {
   min-height: 0;     /* lets responsive container shrink properly */
 }
 
+/* bar chart monthly spending */
 
+.bar-chart-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-chart-inner {
+  flex: 1;
+  min-height: 250px;
+}
 
