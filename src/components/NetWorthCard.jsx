@@ -13,7 +13,7 @@ function NetWorthCard() {
   });
 
   return (
-    <div className="card-account-snapshot" style={{ gridArea: "box-2" }}>
+    <div className="card-account-snapshot" style={{ gridArea: "box-3" }}>
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

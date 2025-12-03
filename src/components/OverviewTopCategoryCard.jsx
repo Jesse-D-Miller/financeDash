@@ -72,7 +72,7 @@ function OverviewTopCategoriesCard() {
   });
 
   return (
-    <div className="card-account-snapshot" style={{ gridArea: "box-3" }}>
+    <div className="card-account-snapshot" style={{ gridArea: "box-4" }}>
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -5,6 +5,7 @@ import OverviewCardCashTotal from "./OverviewCardCashTotal";
 import NetWorthCard from "./NetWorthCard";
 import OverviewTopCategoriesCard from "./OverviewTopCategoryCard";
 import SpendingPieChart from "./SpendingPieChart";
+import OverviewInvestmentSnapshot from "./OverviewInvestmentSnapshot";
 
 function Overview() {
   return (
@@ -12,6 +13,7 @@ function Overview() {
       <OverviewCardCashTotal />
       <NetWorthCard />
       <OverviewTopCategoriesCard />
+      <OverviewInvestmentSnapshot />
       <SpendingPieChart />
       <AccountsSnapshot />
     </div>

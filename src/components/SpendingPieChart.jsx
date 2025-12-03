@@ -161,7 +161,6 @@ function SpendingPieChart() {
                 cx="60%"
                 cy="50%"
                 outerRadius="104%"
-                fill="#8884d8"
                 isAnimationActive={true}
               >
                 {chartDataFinal.map((entry, index) => (
