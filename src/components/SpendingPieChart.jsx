@@ -119,17 +119,16 @@ function SpendingPieChart() {
     });
   }
 
-  console.log(mainCategories);
-  console.log(otherExpensesCategoryTotal);
-
   //assemble final data
-  let chartDataFinal = mainCategories.map((categorySpend) => {
+  let chartData = mainCategories.map((categorySpend) => {
     return {
       name: categorySpend.category,
       value: categorySpend.amount,
       percentage: categorySpend.percentage,
     };
   });
+
+  let chartDataFinal = chartData.sort((a, b) => b.value - a.value);
 
   const currencyFormatter = new Intl.NumberFormat("en-CA", {
     style: "currency",
