@@ -6,6 +6,7 @@ import NetWorthCard from "./NetWorthCard";
 import OverviewTopCategoriesCard from "./OverviewTopCategoryCard";
 import SpendingPieChart from "./SpendingPieChart";
 import OverviewInvestmentSnapshot from "./OverviewInvestmentSnapshot";
+import OverviewMonthlySpendingChart from "./OverviewMonthlySpendingChart";
 
 function Overview() {
   return (
@@ -16,6 +17,7 @@ function Overview() {
       <OverviewInvestmentSnapshot />
       <SpendingPieChart />
       <AccountsSnapshot />
+      <OverviewMonthlySpendingChart />
     </div>
   );
 }

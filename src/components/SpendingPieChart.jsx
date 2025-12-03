@@ -160,7 +160,7 @@ function SpendingPieChart() {
                 nameKey="name"
                 cx="60%"
                 cy="50%"
-                outerRadius="104%"
+                outerRadius="103%"
                 isAnimationActive={true}
               >
                 {chartDataFinal.map((entry, index) => (
