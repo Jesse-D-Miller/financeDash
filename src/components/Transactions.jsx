@@ -30,6 +30,11 @@ function Transactions() {
 
   const mostRecent10 = sortedByNewest.slice(0, 10);
 
+  const currencyFormatter = new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+  });
+
   return (
     <div className="recent-transaction-container">
       <div className="card-title-with-svg">
@@ -59,7 +64,7 @@ function Transactions() {
             <td data-cell="merchant">{transaction.merchant}</td>
             <td data-cell="description">{transaction.description}</td>
             <td data-cell="category">{transaction.category}</td>
-            <td data-cell="amount">{transaction.amount}</td>
+            <td data-cell="amount">{currencyFormatter.format(transaction.amount)}</td>
           </tr>
         ))}
       </table>

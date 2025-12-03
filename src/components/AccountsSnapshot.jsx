@@ -3,6 +3,11 @@ import data from "../data/account_balances_overview.json";
 function AccountsSnapshot() {
   const tableHeaders = ["Institution", "Account Type", "Balance"];
 
+  const currencyFormatter = new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+  });
+
   return (
     <div className="accounts-snapshot-grid-item" style={{ gridArea: "box-5" }}>
       <div className="card-title-with-svg">
@@ -28,7 +33,7 @@ function AccountsSnapshot() {
           <tr className="tr-data-container">
             <td data-cell="institution">{account.bank}</td>
             <td data-cell="account-type">{account.account_type}</td>
-            <td data-cell="balance">{account.balance}</td>
+            <td data-cell="balance">{currencyFormatter.format(account.balance)}</td>
           </tr>
         ))}
       </table>
