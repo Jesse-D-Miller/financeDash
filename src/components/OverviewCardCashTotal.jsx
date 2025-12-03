@@ -13,6 +13,11 @@ function OverviewCardCashTotal() {
     0
   );
 
+  const currencyFormatter = new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+  });
+
   return (
     <div className="card-account-snapshot" style={{ gridArea: "box-1" }}>
       <div>
@@ -28,7 +33,7 @@ function OverviewCardCashTotal() {
         <h7>Total Cash</h7>
       </div>
       <div>
-        <p>{totalCash}</p>
+        <p>{currencyFormatter.format(totalCash)}</p>
         <h7>Chequing and Savings</h7>
       </div>
     </div>

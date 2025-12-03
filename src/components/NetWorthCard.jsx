@@ -2,7 +2,15 @@ import data from "../data/account_balances_overview.json";
 
 function NetWorthCard() {
   //sum balances of all accounts (assets and liabilities)
-  const netWorth = data.accounts.reduce((sum, account) => sum + account.balance, 0);
+  const netWorth = data.accounts.reduce(
+    (sum, account) => sum + account.balance,
+    0
+  );
+
+  const currencyFormatter = new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+  });
 
   return (
     <div className="card-account-snapshot" style={{ gridArea: "box-2" }}>
@@ -19,7 +27,7 @@ function NetWorthCard() {
         <h7>Net Worth</h7>
       </div>
       <div>
-        <p>{netWorth}</p>
+        <p>{currencyFormatter.format(netWorth)}</p>
         <h7>Assets - Liabilities</h7>
       </div>
     </div>

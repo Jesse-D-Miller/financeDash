@@ -48,7 +48,8 @@ function OverviewTopCategoriesCard() {
 
     const category = transaction.category;
 
-    spendByCategory[category] = (spendByCategory[category] || 0) + transaction.amount;
+    spendByCategory[category] =
+      (spendByCategory[category] || 0) + transaction.amount;
   }
 
   //now grab the top category and total amount spent on that category from the object
@@ -64,6 +65,11 @@ function OverviewTopCategoriesCard() {
       topCategory = category; //spending to display
     }
   }
+
+  const currencyFormatter = new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+  });
 
   return (
     <div className="card-account-snapshot" style={{ gridArea: "box-3" }}>
@@ -81,7 +87,7 @@ function OverviewTopCategoriesCard() {
       </div>
       <div>
         <p>{topCategory}</p>
-        <h7>CA ${topCategoryAmount} total</h7>
+        <h7>{currencyFormatter.format(topCategoryAmount)} total</h7>
       </div>
     </div>
   );
