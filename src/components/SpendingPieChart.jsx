@@ -182,6 +182,21 @@ function SpendingPieChart() {
                   // Tooltip expects [valueText, nameText]
                   return [`${formattedValue} (${formattedPercent})`, name];
                 }}
+                contentStyle={{
+                  backgroundColor: "var(--background-color)",
+                  color: "var(--text-color)",
+                  border: "1px solid var(--tertiary-color)",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+                }}
+                labelStyle={{
+                  color: "var(--text-color)",
+                  fontWeight: 600,
+                }}
+                wrapperStyle={{
+                  outline: "none",
+                }}
               />
               <Legend layout="vertical" align="left" verticalAlign="middle" />
             </PieChart>
