@@ -1,13 +1,15 @@
 import data from "../data/account_balances_overview.json";
 
+// Column labels for the accounts table
+const TABLE_HEADERS = ["Institution", "Account Type", "Balance"];
+
+// Currency formatter (CAD)
+const currencyFormatter = new Intl.NumberFormat("en-CA", {
+  style: "currency",
+  currency: "CAD",
+});
+
 function AccountsSnapshot() {
-  const tableHeaders = ["Institution", "Account Type", "Balance"];
-
-  const currencyFormatter = new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-  });
-
   return (
     <div className="accounts-snapshot-grid-item" style={{ gridArea: "box-5" }}>
       <div className="card-title-with-svg">
@@ -22,23 +24,36 @@ function AccountsSnapshot() {
         </svg>
         <h2>Accounts Snapshot</h2>
       </div>
+
+      {/* Summary table of all accounts from account_balances_overview.json */}
       <table>
         <caption>Accounts</caption>
-        <tr>
-          {tableHeaders.map((header) => (
-            <th>{header}</th>
-          ))}
-        </tr>
-        {data.accounts.map((account) => (
-          <tr className="tr-data-container">
-            <td data-cell="institution">{account.bank}</td>
-            <td data-cell="account-type">{account.account_type}</td>
-            <td data-cell="balance">{currencyFormatter.format(account.balance)}</td>
+        <thead>
+          <tr>
+            {TABLE_HEADERS.map((header) => (
+              <th key={header}>{header}</th>
+            ))}
           </tr>
-        ))}
+        </thead>
+
+        <tbody>
+          {data.accounts.map((account) => (
+            <tr
+              className="tr-data-container"
+              key={`${account.bank}-${account.account_type}-${account.account_number ?? ""}`}
+            >
+              <td data-cell="institution">{account.bank}</td>
+              <td data-cell="account-type">{account.account_type}</td>
+              <td data-cell="balance">
+                {currencyFormatter.format(account.balance)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
 }
 
 export default AccountsSnapshot;
+
