@@ -172,32 +172,23 @@ function SpendingPieChart() {
                 ))}
               </Pie>
               <Tooltip
-                formatter={(value, name, { payload }) => {
-                  // value is the numeric "value" for this slice
-                  // payload is the full data object: { name, value, percentage }
-                  const percent = payload.percentage;
+                content={
+                  <CustomTooltip
+                    valueFormatter={(value, rawPayload) => {
+                      const name = rawPayload?.name; // category name from Recharts
+                      const percent = rawPayload?.payload?.percentage;
+                      const formattedValue = currencyFormatter.format(value);
 
-                  const formattedValue = currencyFormatter.format(value);
-                  const formattedPercent = `${percent.toFixed(1)}%`;
+                      if (typeof percent === "number") {
+                        return `${name}: ${formattedValue} (${percent.toFixed(
+                          1
+                        )}%)`;
+                      }
 
-                  // Tooltip expects [valueText, nameText]
-                  return [`${formattedValue} (${formattedPercent})`, name];
-                }}
-                contentStyle={{
-                  backgroundColor: "var(--background-color)",
-                  color: "var(--text-color)",
-                  border: "1px solid var(--tertiary-color)",
-                  borderRadius: "8px",
-                  fontSize: "0.85rem",
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-                }}
-                labelStyle={{
-                  color: "var(--text-color)",
-                  fontWeight: 600,
-                }}
-                wrapperStyle={{
-                  outline: "none",
-                }}
+                      return `${name}: ${formattedValue}`;
+                    }}
+                  />
+                }
               />
               <Legend layout="vertical" align="left" verticalAlign="middle" />
             </PieChart>

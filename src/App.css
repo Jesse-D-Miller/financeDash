@@ -317,7 +317,7 @@ th {
 }
 
 .tooltip-value {
-  color: var(--accent-color);
+  color: var(--text-color);
 }
 
 
