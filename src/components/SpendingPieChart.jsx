@@ -11,6 +11,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
+import CustomTooltip from "./CustomTooltip";
 
 function SpendingPieChart() {
   const COLOURS = [

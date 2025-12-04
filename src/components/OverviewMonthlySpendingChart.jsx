@@ -12,6 +12,7 @@ import {
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
+import CustomTooltip from "./CustomTooltip";
 
 function OverviewMonthlySpendingChart() {
   //combine all transactionsinto one array
@@ -115,24 +116,14 @@ function OverviewMonthlySpendingChart() {
               width={90}
             />
             <Tooltip
-              formatter={(value) => currencyFormatter.format(value)}
-              labelFormatter={formatMonthLabel}
-              contentStyle={{
-                backgroundColor: "var(--background-color)",
-                color: "var(--text-color)",
-                border: "1px solid var(--tertiary-color)",
-                borderRadius: "8px",
-                fontSize: "0.85rem",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-              }}
-              labelStyle={{
-                color: "var(--text-color)",
-                fontWeight: 600,
-              }}
-              wrapperStyle={{
-                outline: "none",
-              }}
+              content={
+                <CustomTooltip
+                  labelFormatter={formatMonthLabel}
+                  valueFormatter={(value) => currencyFormatter.format(value)}
+                />
+              }
             />
+
             <Bar
               dataKey="total"
               fill="var(--accent-color)"
